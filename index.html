@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Mini Notion GC</title>
+	<script src="textoeditor.js" defer></script>
+	<script src="todolist.js" defer></script>
+</head>
+
+<body>
+	<h1>To Do List</h1>
+	<div class="contentToDoList">
+		<div class="contentAdicionarItem">
+			<input type="text" id="nova-tdl" placeholder="Nova to do list">
+			<button onclick="criarComponenteTodolist()" id="botao-enviar"> + </button>
+		</div>
+		<div class="contentLista">
+			<ul id="lista"></ul>
+		</div>
+	</div>
+
+	<div class="containerEditorDeTexto">
+		<h1>Editor de Textos</h1>
+	</div>
+	<div class="containerBotoesTexto" id="">
+		<div class="btn" id="fontes">
+			<button class="btn" id="negrito" onclick="negrito()">N</button>
+			<button class="btn" id="italico" onclick="italico()">I</button>
+		</div>
+	</div>
+	<div id="caixasTextoContainer"></div>
+	<button onclick="criarECriarNova()">Criar Nova Caixa</button>
+</body>
+</html>
