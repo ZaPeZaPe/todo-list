@@ -19,11 +19,24 @@ function criarComponenteTodolist(){
 
 function mostrarLista(){
     let values = JSON.parse(localStorage.getItem(localStorageName) || "[]")
-    let list = document.getElementById('lista')
+    const list = document.getElementById('lista')
     list.innerHTML = ''
-    for(let i =0; i< values.length; i++){
-        list.innerHTML += `<li>${values[i]['name']}<button id='deletar' onClick='removerItem("${values[i]['name']}")'> ok </button></li>`
+    for(const element of values){
+        const item = document.createElement("li");
+        item.innerHTML = element["name"]
+        item.appendChild(createBotaoDone())
+        list.appendChild(item)
     }
+}
+
+function createBotaoDone() {
+    const button = document.createElement("button");
+    button.id = "deletar"
+    button.innerHTML = "ok"
+    button.addEventListener("click", () => {
+        removerItem(element["name"]);
+    });
+    return button;
 }
 
 function removerItem(data){

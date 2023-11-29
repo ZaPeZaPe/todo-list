@@ -5,32 +5,48 @@ function italico() {
 	document.execCommand("italic");
 }
 
-function criarECriarNova() {
+function createNew() {
+	const container = document.getElementById('caixasTextoContainer')
+	container.appendChild(createNovaCaixa());
+	container.appendChild(createBotaoSalvar());
+	container.appendChild(createBotaoEditar());
+	container.appendChild(createBotaoLimpar());
+}
+
+function createNovaCaixa() {
 	const novaCaixaTexto = document.createElement('div');
 	novaCaixaTexto.contentEditable = 'true';
 	novaCaixaTexto.value = '';
 	novaCaixaTexto.className = 'caixaTexto';
-	document.getElementById('caixasTextoContainer').appendChild(novaCaixaTexto);
+	return novaCaixaTexto;
+}
+
+function createBotaoSalvar() {
 	const botaoSalvar = document.createElement('button');
 	botaoSalvar.textContent = 'Salvar';
 	botaoSalvar.onclick = () => {
 		salvarCaixa(novaCaixaTexto, botaoEditar, botaoSalvar, botaoLimpar);
 	};
-	document.getElementById('caixasTextoContainer').appendChild(botaoSalvar);
+	return botaoSalvar;
+}
+
+function createBotaoEditar() {
 	const botaoEditar = document.createElement('button');
 	botaoEditar.textContent = 'Editar';
 	botaoEditar.onclick = () => {
 		editarCaixa(novaCaixaTexto, botaoEditar, botaoSalvar);
 	};
 	botaoEditar.disabled = true;
-	document.getElementById('caixasTextoContainer').appendChild(botaoEditar);
+	return botaoEditar;
+}
 
+function createBotaoLimpar() {
 	const botaoLimpar = document.createElement('button');
 	botaoLimpar.textContent = 'Limpar';
 	botaoLimpar.onclick = () => {
 		limparCaixa(novaCaixaTexto);
 	}
-	document.getElementById('caixasTextoContainer').appendChild(botaoLimpar);
+	return botaoLimpar;
 }
 
 function editarCaixa(caixaTexto, botaoEditar, botaoSalvar) {
