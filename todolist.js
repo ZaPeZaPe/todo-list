@@ -24,12 +24,12 @@ function mostrarLista(){
     for(const element of values){
         const item = document.createElement("li");
         item.innerHTML = element["name"]
-        item.appendChild(createBotaoDone())
+        item.appendChild(createBotaoDone(element))
         list.appendChild(item)
     }
 }
 
-function createBotaoDone() {
+function createBotaoDone(element) {
     const button = document.createElement("button");
     button.id = "deletar"
     button.innerHTML = "ok"
