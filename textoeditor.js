@@ -85,7 +85,7 @@ function createBotaoDeletar(container, item) {
 	botaoDeletar.onclick = () => {
 		container.removeChild(item);
 		let items = JSON.parse(localStorage.getItem(localStgName) || "[]")
-		let index = items.findIndex(dic => dic.id === item.id);
+		const index = items.findIndex(dic => dic.id == item.id);
 		if (index !== -1) {
 			items.splice(index, 1);
 		}
