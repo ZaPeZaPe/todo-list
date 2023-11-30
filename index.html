@@ -8,6 +8,7 @@
 	<title>Mini Notion GC</title>
 	<script src="textoeditor.js" defer></script>
 	<script src="todolist.js" defer></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -27,11 +28,12 @@
 	</div>
 	<div class="containerBotoesTexto" id="">
 		<div class="btn" id="fontes">
-			<button class="btn" id="negrito" onclick="negrito()">N</button>
-			<button class="btn" id="italico" onclick="italico()">I</button>
+			<button class="btn" id="negrito" onclick="negrito()">Negrito</button>
+			
+			<button class="btn" id="italico" onclick="italico()">Italico</button>
 		</div>
 	</div>
 	<div id="caixasTextoContainer"></div>
-	<button onclick="createNew()">Criar Nova Caixa</button>
+	<button id="CriarNova" onclick="createNew()">Criar Nova Caixa</button>
 </body>
 </html>

@@ -1,0 +1,114 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilo para o cabeçalho */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2980b9;
+}
+
+/* Estilo para a seção da To Do List */
+.contentToDoList {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contentToDoList h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2ecc71;
+}
+
+.contentAdicionarItem {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#nova-tdl {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#botao-enviar {
+    padding: 8px 15px;
+    border: none;
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilo para o editor de texto */
+.containerEditorDeTexto {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.containerBotoesTexto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#caixasTextoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+#caixasTextoContainer > div {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+}
+
+/* Botão para criar nova caixa de texto */
+button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+#CriarNova{
+    background-color: #2ecc71;
+}
